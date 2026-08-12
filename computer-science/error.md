@@ -1,0 +1,12 @@
+- pythonが使えないとき
+	- 環境変数
+	- プロンプトの再起動
+- **403 Error**はサーバーがリクエストを拒否している状態を示すHTTPステータスコードであり、**InsecureRequestWarning**は主にPythonでHTTPS接続時のセキュリティ証明書の検証を無効化した際に発生する警告です。 
+- proxy設定
+- `TypeError: 'NoneType' object is not subscriptable` は、値が何もない状態（`None`）の変数に対して、リストや辞書のように**「インデックス（添字）を使って中の要素を取り出そう」としたとき**に発生するエラーです。
+- **TypeError: Object of type set is not JSON serializable** は、Pythonで辞書（dict）やリストなどのデータをJSON文字列に変換（シリアライズ）しようとした際、データの中に`set`**（集合）型**が含まれていると発生するエラーです。JSON形式にはPythonの`set`に該当するデータ型が存在しないため、`json`モジュールで直接変換できません。
+- syntaxerror parameter without a default follows parameter with a default
+	- デフォルトを設定すると順番がある
+- AttributeError: 'str' object has no attribute 'exist'
+	- `str`、つまり文字列に対して `.exist()` というメソッドを呼ぼうとしたけど、そんなメソッドは存在しません.
+	- attributeはオブジェクトに紐づけられたデータや関数のこと

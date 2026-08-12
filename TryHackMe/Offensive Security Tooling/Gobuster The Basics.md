@@ -1,0 +1,17 @@
+- Environment and Setup
+	- サブドメイン、vhostsなどを探す。CMSなどがわかればファイル構成がわかる
+- Gobuster: Introduction
+	- open source
+	- DNS subdomains, vhosts, Amazon S3 buckets, and Google Cloud Storage
+	- brute-force
+	- between reconnaissance and scanning phases
+- Use Case: Directory and File Enumeration
+	- dirの構造をみる
+	-　1つのIPアドレスで複数のWebサイトを動かしていることがあるのでIPを入れるべきではない
+	- Gobusterが自動で深い階層まで潜ってくれない
+	- `-r` は、リダイレクト先の最終的な結果を見るためのオプション
+- Use Case: Subdomain Enumeration
+- Use Case: Vhost Enumeration
+	- vhostはdnsに聞かずにhttpリクエストを送って試す。
+	- リクエストのhost名だけ変える
+	- dnsは登録がないがhostはある場合がある

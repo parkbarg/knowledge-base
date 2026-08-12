@@ -1,0 +1,17 @@
+- コンパイラいらない
+- typescriptはトランスパイルでjavascriptに変換される
+- Internal JSとは、HTMLの中に直接JavaScriptを書く方法
+- External JS
+	- HTMLをきれいに整理できる
+	- 同じwebサーバ
+	- 外部サーバーから読み込む
+		- CDN
+- alert, prompt, confirm
+- Minification
+	- ファイルサイズを小さくする
+- obfuscation
+	- 難読化
+- フロントエンドは便利な画面処理で守るべきは最終チェックはサーバー側で行う必要がある
+- 信頼できないライブラリは追加しない
+- Avoid Hardcoded Secrets
+- Minify and Obfuscate Your JavaScript Code

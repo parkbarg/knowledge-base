@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"id":"076794b1623aae25","x":-327,"y":-60,"width":250,"height":60,"type":"text","text":"attenuation"},
+		{"id":"c2dacaac27df43bc","x":-327,"y":-380,"width":345,"height":60,"type":"text","text":"Use 1, 6 and 11 in the 2.4 GHz spectrum"},
+		{"id":"d25642bfc7fd608d","x":-327,"y":-270,"width":250,"height":60,"type":"text","text":"5 GHz"},
+		{"id":"dc12f3a8edf9356a","x":100,"y":-380,"width":250,"height":60,"type":"text","text":"10-15% overlap between access points is good"},
+		{"id":"fd890036085e80a0","x":-25,"y":-270,"width":250,"height":60,"type":"text","text":"honeycomb pattern"},
+		{"id":"d502f8c2a8374aab","x":280,"y":-270,"width":250,"height":60,"type":"text","text":"it's planning model of APs"},
+		{"id":"b1797284fc93c4c7","x":-25,"y":-160,"width":250,"height":60,"type":"text","text":"not repeated until you're at least two zones away"},
+		{"id":"179c0584891adb0c","x":280,"y":-160,"width":250,"height":60,"type":"text","text":"about channels"},
+		{"id":"21f568cfa8deeb9d","x":100,"y":-500,"width":250,"height":60,"type":"text","text":"don't use near channel"},
+		{"id":"600ea9a44a49b32a","x":-25,"y":70,"width":250,"height":60,"type":"text","text":"Multipath Reception"},
+		{"id":"7540cd28fafa7ee8","x":350,"y":70,"width":250,"height":60,"type":"text","text":"building make redio frequency a lot of direction"},
+		{"id":"86afca3cc4dad00f","x":-25,"y":-60,"width":250,"height":60,"type":"text","text":"wall, building etc"},
+		{"id":"0e4c19acbcb5ab18","x":-600,"y":-160,"width":185,"height":60,"type":"text","text":"Interference Issues"}
+	],
+	"edges":[
+		{"id":"4273af8576cac89f","fromNode":"c2dacaac27df43bc","fromSide":"right","toNode":"21f568cfa8deeb9d","toSide":"left"},
+		{"id":"954c9d02d7e3b2d1","fromNode":"c2dacaac27df43bc","fromSide":"right","toNode":"dc12f3a8edf9356a","toSide":"left"},
+		{"id":"1d7124751943a010","fromNode":"0e4c19acbcb5ab18","fromSide":"right","toNode":"c2dacaac27df43bc","toSide":"left"},
+		{"id":"c3502076b59b1b31","fromNode":"0e4c19acbcb5ab18","fromSide":"right","toNode":"d25642bfc7fd608d","toSide":"left"},
+		{"id":"bb0761646d1d7e2a","fromNode":"0e4c19acbcb5ab18","fromSide":"right","toNode":"076794b1623aae25","toSide":"left"},
+		{"id":"0dc4f4c4af63f308","fromNode":"d25642bfc7fd608d","fromSide":"right","toNode":"fd890036085e80a0","toSide":"left"},
+		{"id":"b1bf6d2f887902cd","fromNode":"fd890036085e80a0","fromSide":"right","toNode":"d502f8c2a8374aab","toSide":"left"},
+		{"id":"0da06b4380274678","fromNode":"b1797284fc93c4c7","fromSide":"right","toNode":"179c0584891adb0c","toSide":"left"},
+		{"id":"08566011000dc588","fromNode":"d25642bfc7fd608d","fromSide":"right","toNode":"b1797284fc93c4c7","toSide":"left"},
+		{"id":"dd2c29daa81bbc03","fromNode":"076794b1623aae25","fromSide":"right","toNode":"86afca3cc4dad00f","toSide":"left"},
+		{"id":"5aad682f73c4f0b1","fromNode":"076794b1623aae25","fromSide":"right","toNode":"600ea9a44a49b32a","toSide":"left"},
+		{"id":"c1fa7a2b2af2d890","fromNode":"600ea9a44a49b32a","fromSide":"right","toNode":"7540cd28fafa7ee8","toSide":"left"}
+	]
+}

@@ -1,0 +1,79 @@
+- What is Burp Suite
+	- ブラウザとWebサーバーの間を流れるHTTP/HTTPS通信を捕まえて、見る・変更するためのツール
+- Features of Burp Community
+	- Proxy
+		- 値を置き換えられる
+	- Repeater
+		- 1つのリクエストを何回も手動で試すための実験場
+	- Intruder
+		- たくさんのリクエストを自動で送る機能
+		- ブルーとフォースとファジング
+	- Decoder
+		- 通信内の読みにくいデータを読める形にしたり、攻撃用の文字列を適切な形式に変換したりする道具
+	- Comparer
+		- 2つのデータを比較する機能
+	- Sequencer
+		- トークンのランダム性を調べる機能
+	- 拡張機能
+		- Extender
+			- 拡張機能を追加する
+		- BApp Store
+			- 拡張機能を探して導入する
+- Installation
+- The Dashboard
+	- 設定は基本的にデフォルトでよい
+	- tasks
+		- 自分が見たページを記録する補助機能
+	- Event log
+		- log
+	- Issue Activity
+		- 自動脆弱性スキャナー
+	- Advisory
+		- 見つかった脆弱性の詳細説明を見る場所
+- Navigation
+- Options
+	- Burp Suiteには全体に残るUser settingsと、現在の作業だけに使うProject settingsがあり、Settingsボタンから設定画面を開いて検索・カテゴリ・種類別に設定を確認できる
+- Introduction to the burp proxy
+	- Burp Proxyはブラウザとサーバーの間に入る  
+	- リクエストを止めて確認・編集できる  
+	- Interceptをオフにしても通信履歴は残る  
+	- HTTP historyで過去の通信を確認できる  
+	- WebSocket通信も記録できる  
+	- Proxy settingsで挙動を細かく変更できる  
+	- 必要ならレスポンスもInterceptできる  
+	- Match and Replaceで通信を自動置換できる
+- Connecting through the proxy
+	- FIrefoxの拡張機能の設定を行ってburp proxyを使う
+- Site Map and Issue Definitions
+	- Site Map
+		- Proxyが有効な状態で訪問したすべてのページがSite mapに表示される
+		- Web脆弱性診断のEnumeration（列挙）に当たる
+	- Issue Definitions
+		- Burp Suiteのスキャナーが検出対象としている脆弱性の一覧
+	- Scope setting
+		- 不要な通信を減らす
+		- 許可された対象だけをテストする
+	- thm拡張子はthumnail
+- The Burp Suite Browser
+	- そのブラウザの通信は自動でBurp Proxyを通る
+	- Chromium
+		- すべてのブラウザの下
+	- sandbox
+		- 隔離された実行環境
+	- rootだとburp browserが起動できないときがある
+		- Chromiumがsandbox環境を作れない
+		- 多分rootがやられたらやばいからかな
+	- smart option
+		- 新しい低権限ユーザーを作成して、そのユーザーでBurp Suiteを実行する
+	- Easy option
+- Scoping and Targeting
+	- 右クリックでadd to scope
+	- Scope外の通信のログを無効にしても、Proxyはまだすべての通信をInterceptする
+	- Scope外の通信をInterceptしないようにするには、Proxy設定を変更します。
+- Proxying HTTPS
+	- AttackBoxはこの問題を解決できるようにすでに設定されている
+	- PortSwigger CA証明書をブラウザに追加する
+- Example Attack
+	- "Reflected" XSS, as it only affects the person making the web request.
+- [[payloadはURLエンコードする]]
+- [[エスケープで対策する]]

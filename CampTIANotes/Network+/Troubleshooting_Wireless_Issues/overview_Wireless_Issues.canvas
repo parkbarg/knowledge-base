@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"id":"34ebf791ef908c1d","type":"group","x":-580,"y":-560,"width":462,"height":272,"label":"about dB"},
+		{"id":"c9e2ef348f7fcd3e","type":"text","text":"Signal sent","x":345,"y":-160,"width":250,"height":60},
+		{"id":"485b68584f792fc1","type":"text","text":"the maximum amount of power that could be radiated from an ideal things","x":185,"y":141,"width":250,"height":120},
+		{"id":"53b060e224f2fd25","type":"text","text":"Over -90 dB -> Extremely weak\nAround -65 dB -> Fairly strong\n-55 dB -> Strong signal\n-30 or above\nExtremely strong","x":-138,"y":141,"width":266,"height":139},
+		{"id":"9947454f8f718996","type":"text","text":"Signal received","x":345,"y":-336,"width":250,"height":60},
+		{"id":"340ebe8d6b71e851","type":"text","text":"Effective Isotropic Radiated Power([[EIRP]]), dBm","x":3,"y":-157,"width":250,"height":55},
+		{"id":"38f4a0dfdc8b34c2","type":"text","text":"EIRP = Tx power (dBm) + antenna gain (dBi) − cable/connector losses (dB)","x":345,"y":-50,"width":250,"height":110},
+		{"id":"54e7d304e3560c28","type":"text","text":"Troubleshooting Wireless Issues","x":-620,"y":-220,"width":280,"height":60},
+		{"id":"8b6d3eebbd31af0d","type":"text","text":"[[Wi-Fi]] and [[802.11]] standards","x":-300,"y":-220,"width":250,"height":60},
+		{"id":"4c224d00aa82e912","type":"text","text":"not Bluetooth, Cellular, Satellite, NFC, RFID","x":-425,"y":-80,"width":250,"height":60},
+		{"id":"a93e3ffb00f07c55","type":"text","text":"Received Signal Strength Indicator([[RSSI]]), dBm","x":2,"y":-366,"width":250,"height":60},
+		{"id":"6f8084225315adb8","type":"file","file":"Network+/Troubleshooting_Wireless_Issues/802.11_distance_indoors_outdoors.png","x":700,"y":-700,"width":262,"height":300},
+		{"id":"c06f7f63e35be523","type":"file","file":"Network+/Troubleshooting_Wireless_Issues/RSSI_example.png","x":310,"y":-870,"width":320,"height":340},
+		{"id":"826c1f0410fb7ce0","type":"file","file":"Network+/Troubleshooting_Wireless_Issues/802.11_bandwidth_throughput.png","x":0,"y":-870,"width":290,"height":325},
+		{"id":"b006df5b76ee0eff","type":"text","text":"about dB","x":-560,"y":-540,"width":122,"height":60},
+		{"id":"f31e99b1ad57bd9a","type":"file","file":"Network+/Troubleshooting_Wireless_Issues/Pasted image 20260314151043.jpg","x":-538,"y":-463,"width":400,"height":175}
+	],
+	"edges":[
+		{"id":"2b9e351fdd81c0e4","fromNode":"8b6d3eebbd31af0d","fromSide":"bottom","toNode":"4c224d00aa82e912","toSide":"top"},
+		{"id":"6aac40daa2699608","fromNode":"a93e3ffb00f07c55","fromSide":"top","toNode":"826c1f0410fb7ce0","toSide":"bottom"},
+		{"id":"9e1c08253bde9e7e","fromNode":"a93e3ffb00f07c55","fromSide":"top","toNode":"c06f7f63e35be523","toSide":"bottom"},
+		{"id":"81421e41a7c1ee1e","fromNode":"a93e3ffb00f07c55","fromSide":"right","toNode":"6f8084225315adb8","toSide":"left"},
+		{"id":"3339f1c96ac36de3","fromNode":"a93e3ffb00f07c55","fromSide":"right","toNode":"9947454f8f718996","toSide":"left"},
+		{"id":"5182196287900ce8","fromNode":"340ebe8d6b71e851","fromSide":"right","toNode":"c9e2ef348f7fcd3e","toSide":"left"},
+		{"id":"056a092e6729a207","fromNode":"340ebe8d6b71e851","fromSide":"bottom","toNode":"38f4a0dfdc8b34c2","toSide":"left"},
+		{"id":"3083aba9809f1eac","fromNode":"340ebe8d6b71e851","fromSide":"bottom","toNode":"485b68584f792fc1","toSide":"top"},
+		{"id":"5cb559cd1e93bd66","fromNode":"340ebe8d6b71e851","fromSide":"bottom","toNode":"53b060e224f2fd25","toSide":"top"}
+	]
+}

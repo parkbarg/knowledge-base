@@ -1,0 +1,37 @@
+{
+	"nodes":[
+		{"id":"d2a4a190ce8259b2","type":"text","text":"Idle timeout","x":-315,"y":-480,"width":250,"height":60},
+		{"id":"8ed8768aa7c151a6","type":"text","text":"to prevent, some wireless client send out few packets on every few minutes","x":20,"y":-480,"width":250,"height":80},
+		{"id":"ead6ad13ca47d366","type":"text","text":"Authentication timeout","x":-315,"y":160,"width":250,"height":60},
+		{"id":"08fe0d07e7a5651c","type":"text","text":"Manual deletion","x":-315,"y":0,"width":250,"height":60},
+		{"id":"c4cc1a9e5ee52fc2","type":"text","text":"Wireless network change","x":-315,"y":-140,"width":250,"height":60},
+		{"id":"b346c6b57172d220","type":"text","text":"Session timeout","x":-315,"y":-300,"width":250,"height":60},
+		{"id":"9e9293b6d270505a","type":"text","text":"deleted by administers","x":20,"y":0,"width":250,"height":60},
+		{"id":"a589cec9e7a1476c","type":"text","text":"local are network is changed","x":20,"y":-140,"width":250,"height":60},
+		{"id":"3d2816a49cb67cb3","type":"text","text":"do authentication again","x":20,"y":-240,"width":250,"height":60},
+		{"id":"265a28b8ec0c92ba","type":"text","text":"1800 seconds","x":20,"y":-330,"width":250,"height":60},
+		{"id":"deacf69874b4308a","type":"text","text":"there's no traffic within 300 seconds","x":20,"y":-560,"width":325,"height":60},
+		{"id":"b87d0914aad83bf3","type":"text","text":"fail to authenticate","x":0,"y":160,"width":250,"height":60},
+		{"id":"422879ec25feeb81","type":"text","text":"Access point radio reset","x":-315,"y":280,"width":250,"height":60},
+		{"id":"332ce4c4f1fded76","type":"text","text":"Deauthentication Attack","x":-315,"y":460,"width":250,"height":60},
+		{"id":"8166c84a87af58af","type":"file","file":"Network+/Troubleshooting_Wireless_Issues/deauthentication_attack.png","x":60,"y":440,"width":316,"height":399},
+		{"id":"e08f4e35a9b0375b","type":"text","text":"Client Disassociation Issues","x":-740,"y":-140,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"81ec2c2cee9e1ab9","fromNode":"332ce4c4f1fded76","fromSide":"right","toNode":"8166c84a87af58af","toSide":"left"},
+		{"id":"f6350c0d496b100b","fromNode":"ead6ad13ca47d366","fromSide":"right","toNode":"b87d0914aad83bf3","toSide":"left"},
+		{"id":"4c905e4b1433c936","fromNode":"08fe0d07e7a5651c","fromSide":"right","toNode":"9e9293b6d270505a","toSide":"left"},
+		{"id":"c5fee253bf417324","fromNode":"c4cc1a9e5ee52fc2","fromSide":"right","toNode":"a589cec9e7a1476c","toSide":"left"},
+		{"id":"1f50d46d00bd9ea5","fromNode":"b346c6b57172d220","fromSide":"right","toNode":"265a28b8ec0c92ba","toSide":"left"},
+		{"id":"224a67264156a12b","fromNode":"b346c6b57172d220","fromSide":"right","toNode":"3d2816a49cb67cb3","toSide":"left"},
+		{"id":"124d003c4313d815","fromNode":"d2a4a190ce8259b2","fromSide":"right","toNode":"deacf69874b4308a","toSide":"left"},
+		{"id":"72c76819c04896bf","fromNode":"d2a4a190ce8259b2","fromSide":"right","toNode":"8ed8768aa7c151a6","toSide":"left"},
+		{"id":"1db0111f36868104","fromNode":"e08f4e35a9b0375b","fromSide":"right","toNode":"d2a4a190ce8259b2","toSide":"left"},
+		{"id":"744f6cbe47bd451f","fromNode":"e08f4e35a9b0375b","fromSide":"right","toNode":"b346c6b57172d220","toSide":"left"},
+		{"id":"f78c0f109f488ce5","fromNode":"e08f4e35a9b0375b","fromSide":"right","toNode":"c4cc1a9e5ee52fc2","toSide":"left"},
+		{"id":"97309f2da98e129c","fromNode":"e08f4e35a9b0375b","fromSide":"right","toNode":"08fe0d07e7a5651c","toSide":"left"},
+		{"id":"40c442dc0ebddd0c","fromNode":"e08f4e35a9b0375b","fromSide":"right","toNode":"ead6ad13ca47d366","toSide":"left"},
+		{"id":"f98974791cb9dfd1","fromNode":"e08f4e35a9b0375b","fromSide":"right","toNode":"422879ec25feeb81","toSide":"left"},
+		{"id":"961b1b97f0e388ab","fromNode":"e08f4e35a9b0375b","fromSide":"right","toNode":"332ce4c4f1fded76","toSide":"left"}
+	]
+}

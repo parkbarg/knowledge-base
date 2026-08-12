@@ -1,0 +1,26 @@
+- Databases 101
+	- Relational databases
+		- 決まった構造に従ってデータを保存するデータベース
+	- Non-relational databases
+		- 表の形にこだわらず、もっと柔軟な形式でデータを保存するデータベース
+	- primary key
+		- テーブルの中で各データを一意に識別するための列
+	- foreign key
+		- 別のテーブルの主キーを参照する列
+- Database and Table Statements
+	- create
+	- show
+	- use
+	- drop
+	- create table
+	- show table
+	- describe table
+	- alter table
+	- drop table
+- CRUD
+	- insert into
+	- select
+	- update
+	- delete
+- Clauses
+	- 句

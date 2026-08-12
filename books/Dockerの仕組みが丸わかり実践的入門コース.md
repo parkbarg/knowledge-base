@@ -1,0 +1,142 @@
+- docker resistory(dockerfile) -> created -> コンテナ起動up → exited -> remove
+- docker image
+	- docker image pull
+	- docker image ls
+	- docker image ls -a
+	- docker image rm
+	- docker image inspect
+		- イメージの詳細情報
+	- docker image build dockerfiledirectory
+		- -t
+			- 名前とダグ
+		- -f
+			- どっかーファイル以外を指定する
+		- --build-arg
+			- ARGに値を渡す
+	- docker image history
+		- イメージがどのように作られたか
+- docker container
+	- docker container run
+		- -it
+		- -d
+			- detach
+			- バックグラウンド実行
+		- command
+			- デフォルトコマンドの変更
+		- --name
+			- コンテナの名前
+		- -rm
+	- docker container start -ai
+		- 使用コンテナをもう一度使用する
+	- docker container ls
+		- -a = ps -a
+	- docker container stop
+	- docker container restart
+	- docker container rm
+		- -f
+			- 強制終了で削除
+		- --rmで起動と同時に消す
+	- docker container logs
+		- 標準出力、標準エラー
+	- docker container exec -it container command
+		- 実行中のコンテナでコマンドを実行する
+		- -d
+			- バックグラウンド実行
+	- docker container prune
+		- 停止済みをまとめて消す
+	- docker container attach
+		- メインプロセスへ
+- dockerfile
+	- docker imageはセーブデータみたいなもの
+	- FORM
+	- RUN
+	- COPY
+	- CMD
+	- build context
+		- client REST API server(docker damon)
+		- dockerifle and context
+	- dockerignore
+	- layer
+		- レイヤーの数が少ないほど良い
+		- container layer（書込可能）
+			- コンテナ上の変更
+		- image layer（読込専用）
+	- cache
+		- ビルド済みのものはcacheされる
+		- 変更点のみ実行される
+			- レイヤーをまとめすぎるとbuildかけるときに溜まってしまう
+			- build速度と容量
+	- minor image capacity
+		- まとめる
+	- ENV
+		- 環境変数の設定方法
+		- $でアクセスする
+		- ＝でつなげる
+		- どっかーファイルおよびコンテナ内で実行可能
+	- ARG
+		- イメージ作成時に利用する変数を渡す
+		- どっかーファイル
+		- コンテナ実行時に影響を与えない
+	- WORKDIR
+		- 作業ディレクトリの指定
+- マルチステージビルド
+	- ソフトウェアとしてコンパイルと実行環境が必要 ->イメージサイズが肥大化する　
+	- --from=0
+		- gccの中からコピー
+		- ASで名前指定して--fromを実行できる
+	- imageサイズに大きな差がある
+	- gccが入っていない
+	- 開発環境と本番環境で分ける
+		- 共通処理部分が二重管理になる
+		- ファイルが多くなり、管理が煩雑になる
+		- よってマルチステージビルドを使う
+		- docker image --target development
+			- ステージの指定
+- Dockerとストレージ
+	- コンテナレイヤーの変更はコンテナが削除されると消える
+	- ボリュームとバインドマウント
+	- デスクトップを使ってるときはlinux VMをかましているのであんま違いがないけどボリュームがdockerが管理していてバインドマウントはホスト環境
+	- docker volume 
+		- create {volume name}
+			- 新しいボリューム領域の作成
+		- ls
+		- inspect {volume name}
+			- 詳細情報
+		- rm {volume name}
+	- docker container
+		- run -v {vol name}{container pass} {image}
+		- run --mount type=volume src={vol name}, dst={container pass} {image}
+			- -v\==--mount
+	-  バインドマウント
+		- docker container
+			- run -v {host pass}{container pass} {image}
+			- run --mount type=volume src={host pass}, dst={container pass} {image} 
+			- $pwdでフルパスを入れなくて済む
+- コンテナと接続する
+	- docker container run -p {host port}:{container port} {image}
+	- Docker ネットワーク
+		- docker network 
+			- ls
+			- create
+			- inspect
+			- rm
+		- docker container run --network {network} {image}
+		- ブリッジネットワーク
+			- デフォルトのブリッジだと名前解決できない
+- docker compose
+	- docker-compose.ymla
+	- docker compose up
+	- 自動でネットワークを作成してくれる
+	- コンテナの名前も付けてくれる
+	- 設定はdockerhubをみる
+	- volumeを使用するときは指定する必要がある
+	- docker compose service name
+	- docker compose --build
+		- docker imageを新しくbuild
+	- docker compose down
+	- バインドマウントするときフルパス入れなくてもいい
+- ソフトウェア開発の流れを理解する
+	- 開発環境の構築→開発→コミット→ビルド→テスト→デプロイ
+	- npm ciは依存関係を解決する
+	- dev containersを行う
+- https://github.com/kentny/docker-simple-cicd-demo

@@ -1,0 +1,7 @@
+- wingetはwindowsのアプリをコマンド管理するためのツール。windows向けのパッケージマネージャ。Chocolatey。Scoop。などがある
+- CI/CDとは
+	- CI = merge前に壊れていないか確認する仕組み  
+	- CD = merge後に環境へ反映する仕組み
+- Set-ExecutionPolicyは、WindowsのPowerShellでスクリプト（.ps1ファイル）の実行許可を設定・変更するためのコマンドレット（コマンド）です
+- NATSとは
+	- アプリケーションやサービス同士がメッセージをやり取りするための、軽量・高速のオープンソースのメッセージイングシステム。基本はpublish/subscribe通信路をsubjectという。ほかにもある。HTTP REST, gRPC, RabbitMQ, kafka, NATS

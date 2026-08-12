@@ -1,0 +1,41 @@
+{
+	"nodes":[
+		{"id":"aee902f45d1f703a","type":"text","text":"[[PoE]] Issues","x":-520,"y":-280,"width":125,"height":60},
+		{"id":"547bbf18ffb23505","type":"text","text":"Power budget exceeded error","x":-320,"y":-400,"width":270,"height":60},
+		{"id":"c2d08471ad19c1da","type":"text","text":"power demand exceed power supply capacity","x":40,"y":-640,"width":387,"height":60},
+		{"id":"0278fffbed328195","type":"text","text":"Power Budget","x":40,"y":-520,"width":162,"height":60},
+		{"id":"c75ac1e2244a75f6","type":"text","text":"sum of all of the DC power available to the end point devices","x":302,"y":-538,"width":250,"height":96},
+		{"id":"f7eac31369e5fe40","type":"text","text":"check the power requirements","x":40,"y":-400,"width":262,"height":60},
+		{"id":"d8e3f7a643138b4a","type":"text","text":"Add up the power requirements","x":40,"y":-300,"width":304,"height":50},
+		{"id":"dbbf427888bd5edd","type":"text","text":"compare that value","x":40,"y":-220,"width":250,"height":60},
+		{"id":"d4489125d82cc81e","type":"text","text":"remove non-essential devices","x":40,"y":-120,"width":262,"height":60},
+		{"id":"2b0b1e397c96b7d2","type":"text","text":"upgrade the PoE source","x":40,"y":-20,"width":250,"height":60},
+		{"id":"61e6a47d3dc092e3","type":"text","text":"The incorrect standard being used","x":-320,"y":300,"width":300,"height":60},
+		{"id":"928feb775d0fe0d9","type":"text","text":"PoE+","x":40,"y":180,"width":250,"height":60},
+		{"id":"d1a8f9cccf9462c6","type":"text","text":"PoE","x":40,"y":80,"width":250,"height":60},
+		{"id":"dd1a2bf4d6944d03","type":"text","text":"30 watts","x":420,"y":80,"width":122,"height":60},
+		{"id":"386f14ca39b1a536","type":"text","text":"15.4 watts","x":420,"y":180,"width":122,"height":60},
+		{"id":"083608b6b5662b73","type":"text","text":"mismatch PoE device and switch","x":40,"y":300,"width":282,"height":60},
+		{"id":"2454c03339f34c6a","type":"text","text":"check the PoE standard and devices","x":360,"y":300,"width":312,"height":60},
+		{"id":"6b0cdcce7a8b8875","type":"text","text":"Use PoE injectors","x":365,"y":400,"width":187,"height":60},
+		{"id":"786718dc0cb90beb","type":"text","text":"replace the switch","x":365,"y":500,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"bce69be2b97f87c4","fromNode":"61e6a47d3dc092e3","fromSide":"right","toNode":"083608b6b5662b73","toSide":"left"},
+		{"id":"4f1bdc266273dcec","fromNode":"61e6a47d3dc092e3","fromSide":"right","toNode":"928feb775d0fe0d9","toSide":"left"},
+		{"id":"e5b7f450d7f24f67","fromNode":"61e6a47d3dc092e3","fromSide":"right","toNode":"d1a8f9cccf9462c6","toSide":"left"},
+		{"id":"bc5cca53376abfdb","fromNode":"d1a8f9cccf9462c6","fromSide":"right","toNode":"dd1a2bf4d6944d03","toSide":"left"},
+		{"id":"4b24e2c279fdb3fa","fromNode":"928feb775d0fe0d9","fromSide":"right","toNode":"386f14ca39b1a536","toSide":"left"},
+		{"id":"3a7e9572726ad391","fromNode":"083608b6b5662b73","fromSide":"right","toNode":"2454c03339f34c6a","toSide":"left"},
+		{"id":"4faa5212fa8d660b","fromNode":"083608b6b5662b73","fromSide":"right","toNode":"6b0cdcce7a8b8875","toSide":"left"},
+		{"id":"c76500230282d2e3","fromNode":"083608b6b5662b73","fromSide":"right","toNode":"786718dc0cb90beb","toSide":"left"},
+		{"id":"48f7b445920bd4d9","fromNode":"547bbf18ffb23505","fromSide":"right","toNode":"c2d08471ad19c1da","toSide":"left"},
+		{"id":"c8a1042a93b3e57b","fromNode":"547bbf18ffb23505","fromSide":"right","toNode":"0278fffbed328195","toSide":"left"},
+		{"id":"6a27879fb4261d5a","fromNode":"0278fffbed328195","fromSide":"right","toNode":"c75ac1e2244a75f6","toSide":"left"},
+		{"id":"db5d6e9a84d66f24","fromNode":"547bbf18ffb23505","fromSide":"right","toNode":"f7eac31369e5fe40","toSide":"left"},
+		{"id":"1067c85c7c5319af","fromNode":"f7eac31369e5fe40","fromSide":"bottom","toNode":"d8e3f7a643138b4a","toSide":"top"},
+		{"id":"6569408ac5698f4f","fromNode":"d8e3f7a643138b4a","fromSide":"bottom","toNode":"dbbf427888bd5edd","toSide":"top"},
+		{"id":"c22cd08db3c27f0a","fromNode":"dbbf427888bd5edd","fromSide":"bottom","toNode":"d4489125d82cc81e","toSide":"top"},
+		{"id":"d9856c3a7da223b9","fromNode":"d4489125d82cc81e","fromSide":"bottom","toNode":"2b0b1e397c96b7d2","toSide":"top"}
+	]
+}

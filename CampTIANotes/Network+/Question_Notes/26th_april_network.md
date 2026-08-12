@@ -1,0 +1,24 @@
+- VLANの目的はブロードキャストドメインを分けること。
+-  ST, SC, LC(single), LC(duplex), FC
+- ベースバンドファームウェアは、携帯電話やスマートフォンなどの通信モジュールにおいて、携帯電話ネットワーク（3G/4G/5G）との通信や信号処理を制御する専用のソフトウェアです
+- 携帯通信の3Gは3generation
+- 携帯電話はFacebookからニュースを見る通信に比べたら軽い
+- Network Troubleshooting Methodology
+- SMTP（Simple Mail Transfer Protocol）は電子メール転送用であり、SNMPのようにネットワークイベント通知を直接提供するものではありません。ICMPはpingで生きているか調べるもの
+- ジャンボフレームはMTU（Maximum Trasmission Unit）1500byteより大きいEthernetフレームのことを言う。SANはStorage Area Networkの略でサーバとストレージ間で大量のデータをやり取りする用途で使われる。ここでジャンボフレームが使われる。NASとは「Network Attached Storage（ネットワーク接続型ストレージ）」の略で、ネットワークに接続できるハードディスク（HDD）やSSDなどのことをいいます。「ネットワーク対応HDD」とも呼ばれています。ファイル共有によく使われる。
+- ESSID複数のAPで同じSSIDを出している全体, SSID人間の見るWiFi名である。BSSIDは機器側で識別するAPのID
+- FLSM（Fixed Length Subnet Mask：固定長サブネットマスク）は、ネットワーク分割においてすべてのサブネットで同じサブネットマスクを使用する手法です。VLSM（Variable Length Subnet Mask：可変長サブネットマスク）は、同一ネットワーク内で異なる長さのサブネットマスクを使い、必要なホスト数に合わせて柔軟にIPアドレスを割り当てる技術です。
+- STPケーブルはシールド付きツイストペアケーブルでありスパニングツリーと似ているので気を付ける
+- セキュリティサービスエッジ (SSE) は、従来のネットワーク境界からクラウドへセキュリティの適用範囲を移行し、クラウドベースのセキュリティサービスを活用して分散ユーザーとデバイスを保護するネットワークセキュリティアーキテクチャです
+- DMZ（非武装地帯）とは、インターネット（外部）と社内ネットワーク（内部）の間に設置された、隔離された「緩衝地帯」です。Webサーバーやメールサーバーなど、外部に公開する機器をこの領域に置くことで、万が一のサイバー攻撃による被害が社内ネットワークに波及するのを防ぐセキュリティ手法です。
+-  Security Assertion Markup Language (SAML) は、信頼できる当事者間で認証および認可データを交換するために設計されており、SSO と複数のシステムへの安全なアクセスを可能にします。SSO（single sign on）は一度認証されると複数の異なるアプリケーションやシステムにアクセスできるようになるものである。
+- SOAP（Simple Object Access Protocol）は昔のWebサービス実装において構造化された情報を交換するための通信プロトコルである。通常XML内のフォーマットである。SOAPはRestより高いセキュリティである。Rest(Representational State Transfer) Uses standard HTTP methods, status codes, URIs, and MIME types for interaction. Relies on JSON for data transfer, making it lightweight and easily integrable with existing websites. Restの方が使いやすくて有名である。
+- Route flapping(経路フラッピング)はネットワーク上にある経路情報が短時間で頻繫に変更されること。動作支障が怒ることがある
+- レイヤ3スイッチでVLANをする利点はハードウェア処理なので高速ルーティングが可能である。
+- DHCPの通信→Discover->offer->Request->Ack
+- 2.4GHzの推奨チャンネルは1,6,11
+- SNMPv3とSNMPv2の違いはセキュリティである。
+- IPv6リンクローカル = fe80::/10
+- ステートフル インスペクション（Stateful Inspection / SPI）は、ファイアウォールが通信の「状態（State）」をセッション単位で追跡・記憶し、パケットが正当な通信の一部であるかを判断するセキュリティ技術。
+- ルーティングプロトコルの2分類はAS「内部」のルーティング処理に関するプロトコルであるIGP (Interior Gateway Protocol)とAS「同士」のルーティング処理に関するプロトコル**EGP** (**E**xterior **G**ateway **P**rotocol)
+- 統一された１つのルーティングポリシーによって運営されるネットワークをASという。

@@ -1,0 +1,179 @@
+- HTTP Messages
+	- HTTP request
+	- HTTP response
+	- Start Line
+	- Headers
+	- Empty Line
+	- Body
+- HTTP Request: Request Line and Methods
+	- Get
+		- 見せてはいけない情報を返さない
+		- TokenやPasswordを入れない
+			- URLに入った情報は残りやすい
+	- POST
+		- 入力値の検証
+		- サニタイズ
+			- 悪意のあるコードを無害化する
+		- エスケープ
+		- 認可チェック
+	- PUT
+		- 全体更新する
+		- 認可チェック
+	- DELETE
+		- 削除していいのかの確認
+	- others
+		- PATCH
+			- 部分更新
+			- 変更してはいけない場所を変更させない
+		- HEAD
+			- GETと似ているがbodyを返さない
+			- 確認などに使用
+			- 不要な情報をヘッダーに入れない
+		- OPTIONS
+			- URLで使用できるHTTPメソッドの確認に使用
+			- ブラウザが本番前に送る場合ある
+			- 不要なら公開範囲を絞る
+		- TRACE
+			- リクエスト内容をオウム返しする
+			- デバッグ用
+			- リクエストヘッダーをレスポンスボディにいれる
+			- 基本的に無効
+		- CONNECT
+			- PROXYサーバーにポートを開けさせる
+			- 多分PROXYがHTTPS通信だと内容が分からない
+			- プロキシ設定や許可先を適切に制御
+	- URL Path
+		- 認可チェック
+			- IDOR(Insecure Direct Object Reference)
+				- 少し変えるだけでアクセス権できてしまう
+		- パストラバーサル
+			- 本来アクセスが許可されていないところに入れてしまう
+		- URLの検証
+		- 危険な文字列が入っていない
+		- 機密情報の保護
+	- HTTP version
+		- HTTP/0.9
+			- The first version, only supported GET requests.
+		- HTTP/1.0
+			- Added headers and better support for different types of content, improving caching.
+		- HTTP/1.1
+			- 接続再利用
+			- chunked transfer encoding
+			- キャッシュ制御の改善
+		- HTTP/2
+			- 多重化
+			- ヘッダー圧縮
+			- 優先度制御
+		- HTTP/3
+			- QUICの上で動きます。QUICはUDPをベースにしていて、接続確立や通信の効率を改善する目的があります
+- HTTP Request; Headers and Body
+	- Headers
+		- Host
+			- どのwebサーバーやどのドメインかを表す
+			- 同じIPアドレスで複数のwebサイトがあるときもある
+		- User-Agent
+			- どんなクライアントから送られてきたリクエストか
+			- User-Agentを信用して処理を分けるのは危ない
+		- Referer
+			- どのURLからこのリクエストに来たのか
+			- 完全には信用できない
+			- 英単語が間違っているらしい
+		- Cookie
+			- サーバーは前回の状態を知らないのでブラウザに保存させる
+			- 盗まれるとログイン状態を乗っ取られる可能性がある
+		- Content-type
+			- データ形式
+	- Body
+		- Getなどでは使わないことが多い
+		- URL Encoded (application/x-www-form-urlencoded)
+			- key=valueの形となっている
+		- Form Data (multipart/form-data)
+			- ファイルや画像のようなバイナリデータを送るとき
+		- JSON
+		- XML
+			- 長い
+			- HTMLみたいなやつ
+			- こっちの方セキュリティが高いらしい
+			- SOAP API
+				- RESTAPIはＵＲＬのなかに入れるだから上が出るのか
+- HTTP Response: Status Line and Status Codes
+	- Status Line
+		- HTTP version
+		- Reason Phrase
+			- ステータスコードの意味を短い英語で説明したもの
+		- Status code
+			- 100
+				- ここまでは受け取ったよ。続きを送っていいよ
+				- リクエストの最初の部分は問題なさそうなので、続きのBodyを送ってください
+			- 200
+				- 成功
+			- 300
+				- Redirection Messages
+				- リクエストしたリソースが別の場所に移動したことを伝える
+			- 400
+				- クライアント側の問題
+			- 500
+				- サーバー側の問題
+- HTTP Response: Headers and Body
+	- Data
+		- サーバーがこのレスポンスを生成した日時
+	- Content-Type
+		- Response Bodyの中身が何の形式か
+	- Server
+		- 細かいバージョンまで見えると、このバージョンに既知の脆弱性があるか調べよう
+		- 本番環境ではServerヘッダーを消したり、詳細なバージョンを隠したりすることがあります。
+	- others
+		- Set-Cookie
+			- さっきとの違いはサーバーがブラウザに「このCookieを保存してね」と指示する
+		- HttpOnly
+			- `HttpOnly` が付いていると、JavaScriptからそのCookieを読み取れなくなります
+		- Secure
+			- `Secure` が付いていると、そのCookieはHTTPS通信でのみ送信されます。
+		- Cache-Control
+			- このレスポンスをブラウザやキャッシュサーバーがどのくらい保存してよいか
+			- no-storeの検討
+		- Location
+			- リダイレクトに使用
+			- Open Redirect
+				- 攻撃者が任意の外部サイトへユーザーをリダイレクトできてしまう脆弱性
+				- 外部URLを許可しない
+				- 相対パスだけ
+				- 許可されたドメインのみ
+	- Response Body
+		- XSS
+			- ユーザーが入力した悪意あるJavaScriptが、他のユーザーのブラウザで実行されてしまう攻撃
+- Security Headers
+	- ブラウザに安全な動きをさせる
+	- 本当は入力側でやらせる
+	- セキュリティを高めようという話
+	- securityheaders.io
+	- Content-Security-Policy, CSP
+		- 読み込んでよいJavaScript、CSS、画像などの読み込み元を制限すること
+		- ホワイトリスト
+			- self, urlなど
+	- Strict-Transport-Security, HSTS
+		- ブラウザに「このサイトには今後必ずHTTPSで接続しなさい」と覚えさせるヘッダー
+		- 自動的にHTTPSにする
+		- preload
+			- に入っているのは初回から
+	- X-Content-Type-Options
+		- ブラウザにMIMEタイプを勝手に推測させない
+		- nosniff
+			- Content-Typeに書かれている型だけを信じて、ブラウザが勝手に中身を推測しない
+			- MIME sniffingで予測していたのはテキストではなくJavaScriptだったらやばい
+	- Referrer-Policy
+		- リンクをクリックして別ページへ移動するとき、移動先にどれくらい元ページのURL情報を送るか
+		- 個人情報が入っている場合がやばい
+		- no-referrer
+			- 一切送らない
+		- same-origin
+			- 同じアクセス元なら良い
+		- strict-origin
+			- 条件を満たすときだけオリジンをおくる
+		- strict-origin-when-cross-origin
+			- 同じオリジンへの移動  
+				- フルURLを送る
+			- 別オリジンへのHTTPS移動
+				- オリジンだけ送る
+			- HTTPSからHTTPへの移動
+				- 送らない

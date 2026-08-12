@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"e1ea89e1c8100ad6","x":-520,"y":-200,"width":200,"height":60,"type":"text","text":"Captive Portal Issues"},
+		{"id":"72636d671195ca23","x":-240,"y":-460,"width":250,"height":60,"type":"text","text":"A Web page like Sinkansen"},
+		{"id":"50389c3e6de5ac97","x":-240,"y":-320,"width":250,"height":60,"type":"text","text":"implement by using"},
+		{"id":"3499e5430f50049e","x":120,"y":-380,"width":250,"height":60,"type":"text","text":"[[HTTP]] redirect"},
+		{"id":"4289e5d1fd168853","x":120,"y":-290,"width":250,"height":60,"type":"text","text":"[[ICMP]] redirect"},
+		{"id":"894daae1d8172606","x":120,"y":-200,"width":250,"height":60,"type":"text","text":"[[DNS]] redirect"},
+		{"id":"d996832d46c9a5ea","x":-260,"y":0,"width":250,"height":60,"type":"text","text":""}
+	],
+	"edges":[]
+}

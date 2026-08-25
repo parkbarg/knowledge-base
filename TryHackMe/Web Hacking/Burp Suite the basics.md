@@ -17,7 +17,7 @@
 	- 拡張機能
 		- Extender
 			- 拡張機能を追加する
-		- BApp Store
+		- App Store
 			- 拡張機能を探して導入する
 - Installation
 - The Dashboard

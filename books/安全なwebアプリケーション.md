@@ -7,5 +7,10 @@
 	- 秘密情報を送信する場合
 	- 送信するデータの総量が多い場合
 - hidden
-	- 情報漏洩や第三者から書き換えに対しては堅牢
-	- ログイン前の処理に用いるべき
+	- 画面に表示しないだけで秘密にするとか改ざんを防ぐとかではない
+- Basic認証
+	- 初回はサーバーが401 Unauthorizedを返す
+		- レスポンスにWWW-Authenticate: Basic realm="example"をつける
+	- 一度成功するとブラウザがHTTPリクエストヘッダのAuthorizationヘッダに入れる
+		- Authorization: Basicといった形
+	- 

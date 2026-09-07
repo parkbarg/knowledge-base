@@ -26,8 +26,23 @@
 		- ノンブロッキングはポーリングする
 	- マルチスレッドやマルチプロセスはたくさんの人がいる感じでその分容量を食うが非同期処理のイベントループは一人だけで待っている間はほかのタスクをやるといった具合である
 - #### ジェネレーターベースのコルチーン
+	- ジェネレーターと似ている
 	- sendメソッドをいれてyieldを追加することができる。外部とうまく協調してくれていることがわかる
 	- yield fromで外部のyieldを持ってこれる
 - #### コルーチンとネイティブコルーチン
-	- 3.5と3.6で記述がちがう
+	- python3.5と3.6で記述がちがう
 	- 非同期をわかっていないと非同期ではない処理を行ってしまうことがある
+- #### asyncioを使用する場面をイメージする
+	- 非同期用の処理がある
+- #### asyncio.lock
+	- yield from = await
+	- with await lock
+- #### asyncio.event
+	- await event.wait()
+	- event.set()
+- #### asyncio.condition
+	- with await condition
+	- condition.wait()
+	- async with condition
+	- condition.notify_all()
+	- バージョンによって違う

@@ -46,3 +46,30 @@
 	- async with condition
 	- condition.notify_all()
 	- バージョンによって違う
+- #### asyncio.Semaphore
+	- 並行処理の実行できる数
+- #### asyncio.Queue
+- #### asyncio.Future
+	- TaskはFutureの一種
+		- Class Task(future.Future)
+	- 将来的に完了して結果が返ってくる処理の枠組み
+- #### asyncio.call_soonとasyncio.call_later
+	- タスクの実行タイミング
+- #### asyncioのチェーンとは
+	- 呼び出し、呼び出しを行う感じ
+	- 完了するまでほかのタスクを行う
+- #### サーバークライアントのストリーム通信
+	- aiohttp
+	- async = @asyncio.coroutine
+	- yield from = await
+- #### ネイティブコルーチンとジェネレーターベースのtypes.coroutine
+	- コルーチンがないとだめだよね
+- #### 特殊メソッドの__await__を使ったAwaitable Class
+	- クラスの時は特殊メソッドを使える
+- #### async for文と__anext__
+	- for ループ
+- #### async with文と__aenter__と__aexist__
+	- with
+- #### websocketsのご紹介
+- #### blocking関数を並列に実行する場合
+- #### asyncio.subprocess

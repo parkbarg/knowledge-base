@@ -7,7 +7,7 @@
 ## vueはこうして始める
 - 単一ファイルコンポーネント
 - Vite
-  - js変換処理を自動で行ってくれる
+  - vue -> js変換処理を自動で行ってくれる
   - nodejsが必要
     - コンピュータ上でjsを動かしてくれる
 - npm create vue@latest
@@ -15,3 +15,9 @@
   - create-vueをインストールしている
   - npm installでpackagejsonがインストールされる
   - distは製品でviteが最適化処理を行ってくれる
+  - .vscode/packagejsonはインストールするといい拡張機能
+  - 右クリックやctlSで特定のフォーマットにできる
+  - editorconfigは拡張機能がないと動かない。
+  - eslint.config.jsでrecommendで厳しくできる
+- create app
+  - 引数にコンポーネント(vueファイル)を渡せる

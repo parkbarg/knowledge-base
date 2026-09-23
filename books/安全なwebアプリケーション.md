@@ -1,16 +1,17 @@
-### webアプリケーションの基礎
+## webアプリケーションの基礎
+
+- [IPA アプリケーションリスト](https://www.ipa.go.jp/security/vuln/websecurity/about.html)
+- [IoT](https://www.ipa.go.jp/security/iot/iotguide.html)
 - Referer
-	- urlに秘密情報を入れていたらここに残ってしまう
-	- 積極的にrefererをチャックする場合は安全
+  - urlに秘密情報を入れていたらここに残ってしまう
+  - 積極的にrefererをチャックする場合は安全
 - GETとPOSTの使い分け
-	- データの更新などの副作用を伴うリクエストの場合
-	- 秘密情報を送信する場合
-	- 送信するデータの総量が多い場合
+  - データの更新などの副作用を伴うリクエストの場合
+  - 秘密情報を送信する場合
+  - 送信するデータの総量が多い場合
 - hidden
-	- 画面に表示しないだけで秘密にするとか改ざんを防ぐとかではない
+  - 画面に表示しないだけで秘密にするとか改ざんを防ぐとかではない
 - Basic認証
-	- 初回はサーバーが401 Unauthorizedを返す
-		- レスポンスにWWW-Authenticate: Basic realm="example"をつける
-	- 一度成功するとブラウザがHTTPリクエストヘッダのAuthorizationヘッダに入れる
-		- Authorization: Basicといった形
-	- 
+  - 初回はサーバーが401 Unauthorizedを返す
+    - レスポンスにWWW-Authenticate: Basic realm="example"をつける
+  - 一度成功するとブラウザがHTTPリクエストヘAuthorizationヘッダに入れる - Authorization: Basicといった形

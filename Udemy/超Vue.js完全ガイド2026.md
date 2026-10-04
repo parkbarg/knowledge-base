@@ -193,7 +193,7 @@
     - DOM更新後の処理(Mount系でもできる)
     - awaitでも記述可能
 - DOM自体にアクセスする
-  - useTemplateReff
+  - useTemplateRef
 ## コンポーネントの高度な機能はこう書く
 - slot(親から子へ)
   - タグごと渡すことができる
@@ -319,6 +319,40 @@
 - スクロールのふるまい
   - scrollBehaviorを設定する
   - 引数にいろいろ指定できるよ
+- ナビゲーションガード
+  - 画面遷移時利用する
+  - beforeEach
+  - beforeEnter
+  - onBeforeRouteUpdate
+    - クエリ、ハッシュ、idの変更を追う
+  - beforeResolve
+  - afterEach
+  - onBeforeRouteleave
+- meta
+  - データを使いで渡せる
+- 遅延読み込み
+  - import関数みたいなのを書く
+
+## Pinia
+- プロジェクト全体で使うデータを管理する方法
+- なぜ必要か
+  - emitとpropsで移動が面倒
+- storeの定義
+  - defineStore()
+  - storeごとにファイルを作成する
+  - 書き方の規約がある
+- コンポーネントからデータを使う方法
+  - importすればいい
+  - リアクティブオブジェクトとなる
+- 名前
+  - state
+    - レフオブジェクト
+  - getter
+    - computedレフオブジェクト
+  - actions
+    - 関数
+- コンポーネント以外でデータを使用したい場合
+  - mainjsの順番に気を付ける
 
 ## 世界中に自分のアプリを公開する方法
 - npm run build
@@ -326,6 +360,33 @@
 - 静的ホスティングサービス
   - vite
     - cloud flare pages
+## TypeScriptとvuejsを一緒に使う方法
+- scriptタグにlang=tsを入れる
+  - 型推論
+  - 型引数に指定
+- ref
+- computed
+- useTemplateRef()
+- イベントハンドラー
+  - イベントオブジェクト(型引数)
+  - 型を指定する
+- props
+  - 実行時宣言
+    - 普通のやつ
+  - 型ベース宣言
+    - definePropsで型引数
+    - 型を別のとこに宣言できる
+    - interface
+    - requreはデフォルトでtrue
+      - ?で逆にできる
+    - デフォルト
+      - 分割代入
+- defineModel
+  - 型ベース宣言、実行時宣言が可能
+  - requreとdefaltも違う
+- emit
+  - 型ベース宣言、実行時宣言が可能
+  - propsと同様
 ## Question
 - なぜこれがうまくいかない
   ```

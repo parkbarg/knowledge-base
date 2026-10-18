@@ -9,8 +9,8 @@
 		{"id":"a46c5617d9431c2a","type":"text","text":"10Gbps, 5 meters\nnew->100Gbps, 7meters","x":-1740,"y":-303,"width":250,"height":60},
 		{"id":"ad196d68857c0bb3","type":"text","text":"cable considerations","x":-2080,"y":-100,"width":250,"height":60},
 		{"id":"ff3545c7b0997fd0","type":"text","text":"shielded twisted pair vs unshielded twisted pair","x":-1780,"y":-115,"width":320,"height":90},
-		{"id":"41dba5e0f052d1c0","type":"file","file":"Network+/Troubleshooting_Physical_Networks/Screenshot 2026-03-10 135119.png","x":-1780,"y":-1060,"width":399,"height":207},
-		{"id":"a3be44d486ebe058","type":"file","file":"Network+/Troubleshooting_Physical_Networks/Screenshot 2026-03-10 135829.png","x":-1690,"y":-764,"width":399,"height":206},
+		{"id":"41dba5e0f052d1c0","type":"file","file":"knowledge-base/comptia/network-plus/troubleshooting-physical-networks/screenshot-2026-03-10-135119.png","x":-1780,"y":-1060,"width":399,"height":207},
+		{"id":"a3be44d486ebe058","type":"file","file":"knowledge-base/comptia/network-plus/troubleshooting-physical-networks/screenshot-2026-03-10-135829.png","x":-1690,"y":-764,"width":399,"height":206},
 		{"id":"9708f6515b05a2ca","type":"text","text":"immune to EMI","x":-1710,"y":-523,"width":250,"height":60},
 		{"id":"aef1ff706718e10a","type":"text","text":"because not electrical","x":-1380,"y":-523,"width":250,"height":60},
 		{"id":"47fd86687d71d4d7","type":"text","text":"protection from EMI but more expensive","x":-1380,"y":-175,"width":250,"height":60},
@@ -32,7 +32,7 @@
 		{"id":"a0a7f7d6a327dc3d","type":"text","text":"VoIP Phone","x":-1291,"y":1220,"width":250,"height":60},
 		{"id":"2e83e84a9d3a43ea","type":"text","text":"Connects two ethernet network devices directly, such as two computers without a switch or a router in between them","x":-1365,"y":790,"width":324,"height":140},
 		{"id":"93b5a66e92dcb2e5","type":"text","text":"data and power","x":-1305,"y":1340,"width":250,"height":60},
-		{"id":"289cde9b450b121d","type":"file","file":"Network+/Troubleshooting_Physical_Networks/Screenshot 2026-03-10 144131.png","x":-930,"y":680,"width":400,"height":200},
+		{"id":"289cde9b450b121d","type":"file","file":"knowledge-base/comptia/network-plus/troubleshooting-physical-networks/screenshot-2026-03-10-144131.png","x":-930,"y":680,"width":400,"height":200},
 		{"id":"7c89f596bc69815a","type":"text","text":"RJ and DB","x":-855,"y":950,"width":250,"height":60}
 	],
 	"edges":[

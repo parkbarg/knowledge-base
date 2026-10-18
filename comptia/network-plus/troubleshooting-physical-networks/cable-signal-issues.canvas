@@ -26,11 +26,11 @@
 		{"id":"0f0e5725712f986c","type":"text","text":"Temperature","x":380,"y":-1220,"width":250,"height":60},
 		{"id":"62c0d9c7d65d21f2","type":"text","text":"[[Decibel (dB) loss]]","x":-260,"y":700,"width":250,"height":60},
 		{"id":"700d00ea0e1c12eb","type":"text","text":"fiber cable","x":79,"y":760,"width":250,"height":60},
-		{"id":"9c35bec8bdd6b7cd","type":"file","file":"Network+/Troubleshooting_Physical_Networks/Screenshot 2026-03-10 162646.png","x":380,"y":-903,"width":399,"height":203},
+		{"id":"9c35bec8bdd6b7cd","type":"file","file":"knowledge-base/comptia/network-plus/troubleshooting-physical-networks/screenshot-2026-03-10-162646.png","x":380,"y":-903,"width":399,"height":203},
 		{"id":"651bfb0c231de102","type":"text","text":"Construction of walls","x":410,"y":-1300,"width":250,"height":60},
 		{"id":"b41c2495dbd5cf01","type":"text","text":"Measures the amount of signal deterioration","x":79,"y":440,"width":380,"height":60},
 		{"id":"ae069c80ac8aa549","type":"text","text":"Copper cable","x":79,"y":600,"width":250,"height":60},
-		{"id":"e7e8d70c96e21bb1","type":"file","file":"Network+/Troubleshooting_Physical_Networks/Screenshot 2026-03-10 172435.png","x":-321,"y":920,"width":400,"height":235}
+		{"id":"e7e8d70c96e21bb1","type":"file","file":"knowledge-base/comptia/network-plus/troubleshooting-physical-networks/screenshot-2026-03-10-172435.png","x":-321,"y":920,"width":400,"height":235}
 	],
 	"edges":[
 		{"id":"7979a7d5d7342e06","fromNode":"6b4726ef13d04595","fromSide":"right","toNode":"7bbeb3df66e0bcaa","toSide":"left"},
